@@ -16,10 +16,33 @@ body {
   margin: 0;
 }
 
+/* TODO : сделать плавный переход обратно с items */
+
+.items {
+  transition: opacity 0.7s, visibility 0.7s;
+}
+
+.items:hover .icon-plus {
+  /* background-color: red; */
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s, visibility 0.7s;
+}
+/* 
+.items:not(:hover) {
+  transition: all 3s linear;
+} */
+
 .item {
   width: 70vw;
   margin-top: 3%;
   cursor: pointer;
+  transition: all 1s linear;
+}
+
+.item:hover .item-img {
+  width: 40vw;
+  transition: all 1s linear;
 }
 
 .line {
@@ -28,11 +51,13 @@ body {
 }
 
 .item-img {
-  width: 40vw;
+  width: 0vw;
+  /* width: 40vw; */
   margin-top: 2%;
-  display: none;
+  /* opacity: 0; */
+  /* display: none; */
+  /* visibility: hidden; */
 }
-
 
 .item-title {
   display: flex;
@@ -46,17 +71,26 @@ body {
   text-shadow: violet;
   font-size: 1.5em;
   font-weight: bold;
+  cursor: pointer;
+  /* transition: opacity 0.6s linear; */
 }
 
+/* .text:hover ~ .icon-plus {
+  opacity: inherit;
+  transition: opacity 0.6s linear;
+} */
+
 .icon-cross {
-  display: none;
+  opacity: 0;
+  /* opacity: 0; */
+  visibility: hidden;
   width: 5%;
   height: 5%;
 }
 
 .icon-plus {
-  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
   width: 5%;
   height: 5%;
 }
-
