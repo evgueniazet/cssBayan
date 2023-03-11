@@ -19,6 +19,7 @@ body {
 .item {
   width: 70vw;
   margin-top: 3%;
+  cursor: pointer;
 }
 
 .line {
@@ -32,6 +33,12 @@ body {
   display: none;
 }
 
+
+.item-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .text {
   display: inline-block;
   font-size: 2vw;
@@ -40,3 +47,16 @@ body {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+.icon-cross {
+  display: none;
+  width: 5%;
+  height: 5%;
+}
+
+.icon-plus {
+  /* display: none; */
+  width: 5%;
+  height: 5%;
+}
+
