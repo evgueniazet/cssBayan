@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/bayan.png" type="image/x-icon">
+    <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/fontawesome.min.css">
     <title>Bayan</title>
 </head>
 
@@ -13,50 +16,52 @@
     <div class="wrapper">
         <h1 class="title">CSS Bayan</h1>
         <div class="items">
-            <div class="item">
+            <input type="radio" name="accordion" id="1" checked />
+            <div class="box">
                 <div class="line"></div>
                 <div class="item-title">
-                    <span class="text">Frontend and backend</span>
-                    <img class="icon-cross" src="./icon/cross.png" alt="icon cross">
-                    <img class="icon-plus" src="./icon/plus.png" alt="icon plus">
+                    <label class="box-title" for="1">Frontend and backend</label>
+                    <i id="icon-plus" class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-                <img class="item-img" src="../cssBayan/img/img1.png" alt="meme">
+
+                <label class="box-close" for="acc-close"></label>
+                <div class="item-content">
+
+                    <img class="item-img" src="../cssBayan/img/img1.png" alt="meme">
+
+                </div>
             </div>
-            <div class="item">
+
+            <input type="radio" name="accordion" id="2" />
+            <div class="box">
                 <div class="line"></div>
                 <div class="item-title">
-                    <span class="text">Not now honey</span>
-                    <img class="icon-cross" src="./icon/cross.png" alt="icon cross">
-                    <img class="icon-plus" src="./icon/plus.png" alt="icon plus">
+                    <label class="box-title" for="2">Frontend and backend</label>
+                    <i id="icon-plus" class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-                <img class="item-img" src="../cssBayan/img/img2.jpg" alt="meme">
+
+                <label class="box-close" for="acc-close"></label>
+                <div class="item-content">
+
+                    <img class="item-img" src="../cssBayan/img/img1.png" alt="meme">
+
+                </div>
             </div>
-            <div class="item">
+
+            <input type="radio" name="accordion" id="3" />
+            <div class="box">
                 <div class="line"></div>
                 <div class="item-title">
-                    <span class="text">12 years later</span>
-                    <img class="icon-cross" src="./icon/cross.png" alt="icon cross">
-                    <img class="icon-plus" src="./icon/plus.png" alt="icon plus">
+                    <label class="box-title" for="3">Frontend and backend</label>
+                    <i id="icon-plus" class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-                <img class="item-img" src="../cssBayan/img/img3.jpg" alt="meme">
-            </div>
-            <div class="item">
-                <div class="line"></div>
-                <div class="item-title">
-                    <span class="text">What does a nervous breakdown look like?</span>
-                    <img class="icon-cross" src="./icon/cross.png" alt="icon cross">
-                    <img class="icon-plus" src="./icon/plus.png" alt="icon plus">
+
+                <label class="box-close" for="acc-close"></label>
+                <div class="item-content">
+
+                    <img class="item-img" src="../cssBayan/img/img1.png" alt="meme">
+
                 </div>
-                <img class="item-img" src="../cssBayan/img/img4.jpg" alt="meme">
-            </div>
-            <div class="item">
-                <div class="line"></div>
-                <div class="item-title">
-                    <span class="text">Programmers 1960s vs Programmers 2020</span>
-                    <img class="icon-cross" src="./icon/cross.png" alt="icon cross">
-                    <img class="icon-plus" src="./icon/plus.png" alt="icon plus">
-                </div>
-                <img class="item-img" src="../cssBayan/img/img5.jpg" alt="meme">
             </div>
         </div>
 
