@@ -17,8 +17,7 @@
   @keyframes pulsate {
     50% {
       color: #fff;
-      text-shadow: 0 -0.02em rgba(0, 0, 0, 0.3), 0 0 1em #fff,
-        0 0 0.1em #fff;
+      text-shadow: 0 -0.02em rgba(0, 0, 0, 0.3), 0 0 1em #fff, 0 0 0.1em #fff;
     }
   }
 
@@ -28,7 +27,7 @@
     font-size: 3em;
     text-transform: uppercase;
     -webkit-animation: pulsate 1.2s linear infinite;
-    animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.5s linear infinite;
   }
 
   .items {
@@ -75,11 +74,12 @@
   }
 
   .icon-plus {
-    width: 2%;
-    height: 2%;
-    margin-top: 0.5%;
+    margin: 0;
     opacity: 0;
     visibility: hidden;
+    font-size: 1.5em;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease,
+      color 0.15s ease;
   }
 
   .wrapper input {
@@ -97,11 +97,6 @@
     margin-top: 1%;
     transition: height 0.3s ease;
   }
-
-  /* input:checked {
-    height: auto;
-    margin: 16px 0;
-  } */
 
   input:checked + .box .box-text {
     color: #fff;
@@ -121,27 +116,18 @@
     color: #fff;
   }
 
-  /* .arrows section .box-label {
-    padding-left: 44px;
-    width: calc(100% - 64px);
-  } */
-
   @media (hover: hover) {
     .items:hover .icon-plus {
       visibility: visible;
       opacity: 1;
-      transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.3s ease,
-        color 0.15s ease;
+      color: #fff;
+      transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+        transform 0.3s ease;
     }
 
     .items:hover .box-text {
       color: #fff;
       transition: color 0.15s ease;
-    }
-
-    .items:hover .icon-plus {
-      color: #fff;
-      transition: color 0.15s ease, transform 0.3s ease;
     }
 
     .items:hover .line {
@@ -204,7 +190,7 @@
   }
 
   .icon-plus {
-    display: block;
+    visibility: hidden;
   }
 }
 
