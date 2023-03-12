@@ -14,11 +14,21 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+  @keyframes pulsate {
+    50% {
+      color: #fff;
+      text-shadow: 0 -0.02em rgba(0, 0, 0, 0.3), 0 0 1em #fff,
+        0 0 0.1em #fff;
+    }
+  }
+
   .title {
     margin: 0;
     color: #bddbff;
     font-size: 3em;
     text-transform: uppercase;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
   }
 
   .items {
@@ -88,10 +98,10 @@
     transition: height 0.3s ease;
   }
 
-  input:checked {
+  /* input:checked {
     height: auto;
     margin: 16px 0;
-  }
+  } */
 
   input:checked + .box .box-text {
     color: #fff;
@@ -111,10 +121,10 @@
     color: #fff;
   }
 
-  .arrows section .box-label {
+  /* .arrows section .box-label {
     padding-left: 44px;
     width: calc(100% - 64px);
-  }
+  } */
 
   @media (hover: hover) {
     .items:hover .icon-plus {
