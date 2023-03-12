@@ -1,16 +1,31 @@
 body {
   margin: 0;
   background: #2d2e58;
+  background: -o-radial-gradient(at 50% 40%, #2d2e58 0%, #94bbe9 100%);
   background: radial-gradient(at 50% 40%, #2d2e58 0%, #94bbe9 100%);
   height: 100vh;
 }
 
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 2vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@-webkit-keyframes pulsate {
+  50% {
+    color: #fff;
+    text-shadow: 0 0 #000, 0 0 1em #fff, 0 0 0 #fff;
+  }
 }
 
 @keyframes pulsate {
@@ -33,6 +48,8 @@ body {
   margin-top: 2vw;
   color: #bddbff;
   cursor: pointer;
+  -webkit-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
   transition: color 0.15s ease;
 }
 
@@ -44,17 +61,29 @@ body {
   width: 50vw;
   padding-bottom: 1.5%;
   cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .box:active {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .box-line {
   height: 0.1em;
   background-color: #bddbff;
+  -webkit-transition: background-color 0.15s ease;
+  -o-transition: background-color 0.15s ease;
   transition: background-color 0.15s ease;
 }
 
@@ -66,13 +95,19 @@ body {
 }
 
 .box-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .box-text {
   margin: 0;
   font-size: 2em;
+  -webkit-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
   transition: color 0.15s ease;
 }
 
@@ -81,19 +116,35 @@ body {
   opacity: 0;
   visibility: hidden;
   font-size: 2em;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+    -webkit-transform 0.3s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+    -webkit-transform 0.3s ease;
+  -o-transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease,
+    color 0.15s ease;
   transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease,
     color 0.15s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease,
+    color 0.15s ease, -webkit-transform 0.3s ease;
 }
 
 .box-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .box-img {
   height: 0;
   margin-top: 1%;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
   transition: height 0.3s ease;
 }
 
@@ -107,10 +158,14 @@ input:checked + .box .box-line {
 
 input:checked + .box .box-img {
   height: 30vh;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
   transition: height 0.3s ease;
 }
 
 input:checked + .box .box-icon {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
   color: #fff;
 }
@@ -120,29 +175,51 @@ input:checked + .box .box-icon {
     visibility: visible;
     opacity: 1;
     color: #fff;
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s ease,
+      color 0.15s ease, -webkit-transform 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+      -webkit-transform 0.3s ease;
+    -o-transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+      transform 0.3s ease;
     transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
       transform 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease, color 0.15s ease,
+      transform 0.3s ease, -webkit-transform 0.3s ease;
   }
 
   .items:hover .box-text {
     color: #fff;
+    -webkit-transition: color 0.15s ease;
+    -o-transition: color 0.15s ease;
     transition: color 0.15s ease;
   }
 
   .items:hover .box-line {
     background-color: #fff;
+    -webkit-transition: background-color 0.15s ease;
+    -o-transition: background-color 0.15s ease;
     transition: background-color 0.15s ease;
   }
 
   .box:hover .box-img {
     height: 30vh;
+    -webkit-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
     transition: height 0.3s ease;
   }
 
   .box:hover .box-icon {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
     transform: rotate(135deg);
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
     transform-origin: 50%;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
 }
 
