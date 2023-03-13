@@ -77,6 +77,11 @@ body {
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #fff;
+}
+
+.box:active .box-img {
+  opacity: 0.5;
 }
 
 .box-line {
